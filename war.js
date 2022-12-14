@@ -1,21 +1,25 @@
+
+
 const SUITS = ["♠", "♣", "♥", "♦"] /*this variable will hold our  array 
  containing the suits for all of our cards*/
 const VALUES = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10",
   "J", "Q", "K"]
 
 
-class Deck {
-  constructor(cards) {
-    this.cards = cards /* this keyword is refering to the object were using
-    in this case were referencing the cards object in deck class. cards in
-    this constructor will hold all of our cards  this .cards will represent 
-    the entire deck of cards*/
-  }
+export default class Deck {
+  constructor(cards = freshDeck()) {
+    this.cards = cards
+  } /* this keyword is refering to the object were using
+  in this case were referencing the cards object in deck class. cards in
+  this constructor will hold all of our cards  this .cards will represent 
+  the entire deck of cards*/
 
-  get numberOfCards() {   /*this will return a diffrent card based on the number of cards within the deck*/
+
+
+  get numberOfCards() {
     return this.cards.length
   }
-
+  /*this will return a diffrent card based on the number of cards within the deck*/
 
   shuffle() {
     for (let i = this.numberOfCards - 1; i > 0; i--) { /*this loop iterate through our deck of cars and will start from
@@ -43,7 +47,7 @@ class Card {
   }
 
   get color() {
-    return this.suit === '♣' || this.suit === '♠' ? ' black' : 'red'
+    return this.suit === '♣' || this.suit === '♠' ? 'black' : 'red'
   }
 
   getHTML() {
@@ -55,7 +59,6 @@ class Card {
   } /* this function allows us to get the html for all of our Cards*/
 }
 
-
 function freshDeck() {
   return SUITS.flatMap(suit => {   /*this flatmap method combines our arrays and gives each card
   in freshdeck a suit and value and combines both arrays into one */
@@ -66,3 +69,5 @@ function freshDeck() {
   })
 }  /* this fucnction will create a new deck of cards with all 52 cards 
 one card for each suit and value combination*/
+
+
