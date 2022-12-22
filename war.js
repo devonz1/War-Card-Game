@@ -19,6 +19,16 @@ export default class Deck {
   get numberOfCards() {
     return this.cards.length
   }
+
+
+  pop() {
+    return this.cards.shift()
+  }
+
+  push(card) {
+    this.cards.push(card)
+  }
+
   /*this will return a diffrent card based on the number of cards within the deck*/
 
   shuffle() {
