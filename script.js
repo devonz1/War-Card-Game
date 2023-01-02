@@ -22,6 +22,8 @@ const playerCardSlot = document.querySelector(".player-card-slot")
 const computerDeckElement = document.querySelector('.computer-deck')
 const playerDeckElement = document.querySelector('.player-deck')
 const text = document.querySelector('.text')
+const lblScore = document.querySelector('.lblScore')
+
 
 let playerDeck, computerDeck, inRound, stop
 
@@ -67,6 +69,9 @@ function cleanBeforeRound() {
     updateDeckcount()
 }
 
+ 
+
+
 function flipCards() {
     inRound = true
     const playerCard = playerDeck.pop()
@@ -97,7 +102,11 @@ function flipCards() {
         stop = true
     }
 
-}
+ 
+   }
+
+
+ var score= 0;
 
 
 function updateDeckcount() {
@@ -107,7 +116,12 @@ function updateDeckcount() {
 
 function isRoundWinner(cardOne, cardTwo) {
     return CARD_VALUE_MAP[cardOne.value] > CARD_VALUE_MAP[cardTwo.value]
+      
 }
+
+ 
+
+
 
 function isGameOver(deck) {
     return deck.numberOfCards === 0

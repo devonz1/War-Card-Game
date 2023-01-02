@@ -63,7 +63,8 @@ class Card {
   getHTML() {
     const cardDiv = document.createElement('div')
     cardDiv.innerText = this.suit
-    cardDiv.classList.add("card", this.color)
+    cardDiv.classList.add("card", this.color) /* this.color is referencing the getter method 
+    get color() which will give us the color of our cards either red or black */
     cardDiv.dataset.value = `${this.value}${this.suit}`
     return cardDiv
   } /* this function allows us to get the html for all of our Cards*/

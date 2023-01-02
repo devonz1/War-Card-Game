@@ -1,0 +1,23 @@
+{
+  "name": "war-card-game",
+  "version": "1.0.0",
+  "description": "War Card Game Week 6 Assignment",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devonz1/War-Card-Game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devonz1/War-Card-Game/issues"
+  },
+  "homepage": "https://github.com/devonz1/War-Card-Game#readme",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  }
+}
